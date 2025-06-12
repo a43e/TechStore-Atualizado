@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>TechStore</title>
+</head>
+
+<body>
+    <!-- =================================== -->
+    <!-- HEADER -->
+    <!-- =================================== -->
+
+    <header class="header" id="home">
+        <a href="#" class="logo">Tech<span>Store</span></a>
+        <nav class="navbar">
+            <a href="#home">Início</a>
+            <a href="#products">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <!-- =================================== -->
+    <!-- HOME -->
+    <!-- =================================== -->
+
+    <section class="home" id="home">
+        <!--div class="home-img">
+            <img src="img/imagem.png" alt="Hardware de Computador">
+        </div-->
+        <div class="home-content">
+            <h1>Computador
+                <span>Hardware Store</span>
+            </h1>
+            <p>Encontre os melhores componentes para seu PC. Placas-mãe, processadores, memórias e muito mais com
+                qualidade garantida.</p>
+            <div class="btn-box">
+                <a href="#products">Ver Produtos</a>
+                <a href="#">Fale Conosco</a>
+            </div>
+            <div class="scroll-indicator">
+            <span>↓ Role para baixo ↓</span>
+        </div>
+        </div>
+    </section>
+
+    <!-- =================================== -->
+    <!-- PRODUTOS -->
+    <!-- =================================== -->
+
+    <section class="products" id="products">
+        <div class="products-content">
+            <h1>Produtos em <span>Destaque</span></h1>
+            <p>Descubra nossa seleção dos melhores componentes de hardware com preços especiais</p>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="product-badge badge-bestseller">Mais Vendido</div>
+                    <img src="img/placa-mae-gigabyte-z790-gaming-x-ax-intel-atx-ddr5-wi-fi-bluetooth-z790-gaming-x-ax_1689078182_gg.webp" alt="Placa-Mãe Z790">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star empty"></i>
+                        </div>
+                        <span class="rating-number">(4.8)</span>
+                    </div>
+                    <h3 class="product-name">Placa-Mãe Z790 Gaming</h3>
+                    <p class="product-description">Placa-mãe premium para gaming com suporte DDR5</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 1.299,90</span>
+                        <span class="product-old-price">R$ 1.499,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="product-badge badge-new">Novo</div>
+                    <img src="img/processador-intel-core-i7-13700k-13-geracao-16-nucleos-lga-1-87ef399c-f30c-4b55-8bdd-b2fda23b2759.webp" alt="Intel Core i7-13700K">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <span class="rating-number">(4.9)</span>
+                    </div>
+                    <h3 class="product-name">Intel Core i7-13700K</h3>
+                    <p class="product-description">Processador de 13ª geração com 16 núcleos</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 2.199,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <div class="product-badge badge-offer">Oferta</div>
+                    <img src="img/placa-de-video-rtx-4070-ti-gaming-x-slim-12g-msi-nvidia-geforce-12gb-gddr6x-g-sync-dlss-ray-tracing-_1698785280_gg.webp" alt="RTX 4070 Ti Gaming">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star empty"></i>
+                        </div>
+                        <span class="rating-number">(4.7)</span>
+                    </div>
+                    <h3 class="product-name">RTX 4070 Ti Gaming</h3>
+                    <p class="product-description">Placa de vídeo para jogos em 4K</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 4.599,90</span>
+                        <span class="product-old-price">R$ 4.999,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/32gb-crucial.png" alt="DDR5 32GB Kit">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <span class="rating-number">(4.6)</span>
+                    </div>
+                    <h3 class="product-name">DDR5 32GB Kit</h3>
+                    <p class="product-description">Memória RAM DDR5 6400MHz RGB</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 899,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                <img src="img/nvme-m2-ssd-mz-v8v1t0bw-538082263.webp" alt="nvme-m2-ssd-mz-v8v1t0bw-538082263">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                        <span class="rating-number">(4.8)</span>
+                    </div>
+                    <h3 class="product-name">SSD NVMe 1TB</h3>
+                    <p class="product-description">Armazenamento ultra-rápido PCIe 4.0</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 599,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="img/fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_1540838589_g.webp" alt="">
+                </div>
+                <div class="product-info">
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star empty"></i>
+                        </div>
+                        <span class="rating-number">(4.5)</span>
+                    </div>
+                    <h3 class="product-name">Fonte 750W Modular</h3>
+                    <p class="product-description">Fonte de alimentação 80+ Gold certificada</p>
+                    <div class="product-price-container">
+                        <span class="product-price">R$ 799,90</span>
+                    </div>
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Adicionar ao Carrinho
+                    </button>
+                </div>
+            </div>
+        </div> 
+        
+        <!-- Botão de voltar ao topo -->
+    <button class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
+        ↑
+    </button>
+    
+    <script>
+        // Função para rolar até o final da página
+        function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        // Função para voltar ao topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mostrar/esconder botão de voltar ao topo baseado no scroll
+        window.addEventListener('scroll', function() {
+            const backToTopBtn = document.querySelector('.back-to-top');
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+                scrollIndicator.style.opacity = '0';
+            } else {
+                backToTopBtn.classList.remove('show');
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+
+        // Adicionar efeito de parallax suave ao home
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const home = document.querySelector('.home');
+            const rate = scrolled * -0.5;
+            
+            if (scrolled < window.innerHeight) {
+                home.style.transform = `translateY(${rate}px)`;
+            }
+        });
+
+        // Animação de entrada das seções
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas as seções
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+
+        // Smooth scroll para links internos (se houver)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    </section>
+
+    <!-- =================================== -->
+    <!-- footer -->
+    <!-- =================================== -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tech<span>Store</span></h3>
+                <p>Sua loja especializada em hardware de alta performance. Qualidade e confiança há mais de 10 anos.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                    <li><a href="#">Garantia</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Processadores</a></li>
+                    <li><a href="#">Placas de Vídeo</a></li>
+                    <li><a href="#">Memórias</a></li>
+                    <li><a href="#">Armazenamento</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
