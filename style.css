@@ -1,5 +1,11 @@
+/* ============================================ */
+/* IMPORTS */
+/* ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=WDXL+Lubrifont+TC&display=swap');
 
+/* ============================================ */
+/* RESET E CONFIGURAÇÕES GLOBAIS */
+/* ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +14,48 @@
 }
 
 body {
-    background: url('img/vista-da-configuracao-e-controla.jpg') no-repeat center center fixed;
-    /*background: #f8fafc;*/
+    background-color: var(--bg-color);
     background-size: cover;
-    color: white;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: url('img/vista-da-configuracao-e-controlador-de-teclado-para-jogos-de-neon-iluminado.jpg') no-repeat center center fixed;
 }
 
+/* ============================================ */
+/* VARIÁVEIS CSS (TEMA CLARO/ESCURO) */
+/* ============================================ */
+:root {
+    /* Tema Claro */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f9fa;
+    --border-color: #e9ecef;
+    --accent-color: #007bff;
+    --hover-color: #0056b3;
+    --toggle-bg: #dee2e6;
+    --toggle-circle: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    /* Tema Escuro */
+    --bg-color: #1a1a1a;
+    --text-color: #e9ecef;
+    --header-bg: #2d3748;
+    --border-color: #4a5568;
+    --accent-color: #4299e1;
+    --hover-color: #63b3ed;
+    --toggle-bg: #4a5568;
+    --toggle-circle: #1a202c;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================ */
+/* HEADER E NAVEGAÇÃO */
+/* ============================================ */
 .header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
     position: relative;
     top: 0;
     left: 0;
@@ -62,13 +103,73 @@ body {
     color: #3b82f6;
 }
 
+/* ============================================ */
+/* TOGGLE DE TEMA */
+/* ============================================ */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: var(--toggle-bg);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+
+.toggle-circle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    background-color: var(--toggle-circle);
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .toggle-circle {
+    transform: translateX(30px);
+}
+
+/* Ícones do toggle */
+.toggle-icon {
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+}
+
+.sun-icon {
+    opacity: 1;
+}
+
+.moon-icon {
+    opacity: 0.5;
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0.5;
+}
+
+[data-theme="dark"] .moon-icon {
+    opacity: 1;
+}
+
+/* ============================================ */
+/* SEÇÃO HOME */
+/* ============================================ */
 .home {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 0 10%;
     justify-content: flex-end;
-    
 }
 
 .home-content {
@@ -94,6 +195,7 @@ body {
     color: whitesmoke;
 }
 
+/* Botões da Home */
 .home-content .btn-box {
     display: flex;
     justify-content: space-between;
@@ -121,14 +223,12 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     animation: slideInLeft 1s ease-out 0.9s forwards;
-
-
 }
 
 .btn-box a:nth-child(2) {
     background: transparent;
     color: white;
-    border-color: black;
+    border: 2px solid white;
 }
 
 .btn-box a:hover {
@@ -136,40 +236,22 @@ body {
     box-shadow: 0 15px 40px rgba(6, 182, 212, 0.4);
     background: #0891b2;
 }
-/*
-.home-img {
-    flex-shrink: 0;
-    max-width: 500px;
-    margin: 56px;
-}
 
-.home-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}*/
-
-/* Botão de scroll para baixo */
-.scroll-down-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
+/* Indicador de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
-    padding: 12px 24px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease-out 0.6s both;
+    animation: bounce 2s infinite;
 }
 
-.scroll-down-btn:hover {
-    background: white;
-    color: #667eea;
-    transform: translateY(-2px);
-}
-
+/* ============================================ */
+/* SEÇÃO PRODUTOS */
+/* ============================================ */
 .products {
+    background-color: var(--bg-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -177,7 +259,6 @@ body {
     padding: 80px 10% 40px;
     justify-content: flex-start;
     text-align: center;
-    background: #f8fafc;
 }
 
 .products-content {
@@ -189,19 +270,20 @@ body {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1.2;
-    color: #1f2937;
+    color: white;
+}
+
+.products-content h1 span {
+    color: #f97316;
 }
 
 .products-content p {
     font-size: 16px;
     margin: 20px 0 40px;
-    color: #6b7280;
+    color: whitesmoke;
 }
 
-.products-content span {
-    color: #f97316;
-}
-
+/* Grid de Produtos */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -210,6 +292,9 @@ body {
     max-width: 1400px;
 }
 
+/* ============================================ */
+/* CARDS DE PRODUTO */
+/* ============================================ */
 .product-card {
     background: white;
     border-radius: 16px;
@@ -226,6 +311,7 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Container da Imagem */
 .product-image-container {
     position: relative;
     height: 220px;
@@ -236,6 +322,19 @@ body {
     overflow: hidden;
 }
 
+.product-image-container img {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image-container img {
+    transform: scale(1.05);
+}
+
+/* Badges dos Produtos */
 .product-badge {
     position: absolute;
     top: 12px;
@@ -260,27 +359,28 @@ body {
     background: #f59e0b;
 }
 
-.product-image-container img {
-    width: 80%;
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image-container img {
-    transform: scale(1.05);
-}
-
-.product-image-container i {
-    font-size: 4rem;
-    color: #9ca3af;
-}
-
+/* Informações do Produto */
 .product-info {
     padding: 1.5rem;
 }
 
+.product-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    min-height: 2.8rem;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Avaliações */
 .product-rating {
     display: flex;
     align-items: center;
@@ -308,22 +408,7 @@ body {
     font-weight: 500;
 }
 
-.product-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-    min-height: 2.8rem;
-}
-
-.product-description {
-    font-size: 14px;
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-}
-
+/* Preços */
 .product-price-container {
     display: flex;
     flex-direction: column;
@@ -343,6 +428,7 @@ body {
     text-decoration: line-through;
 }
 
+/* Botão Adicionar ao Carrinho */
 .add-to-cart {
     width: 100%;
     padding: 0.75rem;
@@ -364,7 +450,9 @@ body {
     transform: translateY(-1px);
 }
 
-/* Botão de voltar ao topo */
+/* ============================================ */
+/* BOTÃO VOLTAR AO TOPO */
+/* ============================================ */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -407,65 +495,9 @@ body {
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1.3);
-        opacity: 0;
-    }
-}
-
-/* Animações de entrada */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Indicador de scroll */
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-
-
-
-
-/* Footer */
+/* ============================================ */
+/* FOOTER */
+/* ============================================ */
 .footer {
     background: #1f2937;
     color: white;
@@ -486,8 +518,14 @@ body {
     margin-bottom: 1rem;
     color: white;
 }
+
 .footer-section h3 span {
     color: #f97316;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
 }
 
 .footer-links {
@@ -508,6 +546,7 @@ body {
     color: #06b6d4;
 }
 
+/* Ícones Sociais */
 .social-icons {
     display: flex;
     gap: 1rem;
@@ -540,9 +579,59 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* ============================================ */
+/* ANIMAÇÕES */
+/* ============================================ */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
 
-/* Responsividade */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE */
+/* ============================================ */
 @media (max-width: 768px) {
+    /* Header Mobile */
     .header {
         flex-direction: column;
         padding: 15px 5%;
@@ -558,29 +647,52 @@ body {
         margin: 0 15px;
     }
 
+    /* Home Mobile */
     .home {
         flex-direction: column;
         text-align: center;
         padding: 120px 5% 60px;
     }
-/*
-    .home-img {
-        order: -1;
-        margin: 0 0 30px 0;
-        max-width: 300px;
-    }*/
+
+    .home-content h1 {
+        font-size: 40px;
+    }
 
     .home-content .btn-box {
         justify-content: center;
         margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
     }
 
+    .btn-box a {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Produtos Mobile */
     .products {
         padding: 60px 5% 20px;
+    }
+
+    .products-content h1 {
+        font-size: 2rem;
     }
 
     .products-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
+    }
+
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }
