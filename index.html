@@ -14,7 +14,6 @@
     <!-- =================================== -->
     <!-- HEADER -->
     <!-- =================================== -->
-
     <header class="header" id="home">
         <a href="#" class="logo">Tech<span>Store</span></a>
         <nav class="navbar">
@@ -24,36 +23,35 @@
             <a href="#">Contato</a>
             <a href="#">Login</a>
         </nav>
+        <div class="theme-toggle">
+            <span class="toggle-icon sun-icon">☀️</span>
+            <div class="toggle-switch" onclick="toggleTheme()">
+                <div class="toggle-circle"></div>
+            </div>
+            <span class="toggle-icon moon-icon">🌙</span>
+        </div>
     </header>
 
     <!-- =================================== -->
-    <!-- HOME -->
+    <!-- HOME SECTION -->
     <!-- =================================== -->
-
     <section class="home" id="home">
-        <!--div class="home-img">
-            <img src="img/imagem.png" alt="Hardware de Computador">
-        </div-->
         <div class="home-content">
-            <h1>Computador
-                <span>Hardware Store</span>
-            </h1>
-            <p>Encontre os melhores componentes para seu PC. Placas-mãe, processadores, memórias e muito mais com
-                qualidade garantida.</p>
+            <h1>Computador <span>Hardware Store</span></h1>
+            <p>Encontre os melhores componentes para seu PC. Placas-mãe, processadores, memórias e muito mais com qualidade garantida.</p>
             <div class="btn-box">
                 <a href="#products">Ver Produtos</a>
                 <a href="#">Fale Conosco</a>
             </div>
             <div class="scroll-indicator">
-            <span>↓ Role para baixo ↓</span>
-        </div>
+                <span>↓ Role para baixo ↓</span>
+            </div>
         </div>
     </section>
 
     <!-- =================================== -->
-    <!-- PRODUTOS -->
+    <!-- PRODUCTS SECTION -->
     <!-- =================================== -->
-
     <section class="products" id="products">
         <div class="products-content">
             <h1>Produtos em <span>Destaque</span></h1>
@@ -61,6 +59,7 @@
         </div>
 
         <div class="products-grid">
+            <!-- Produto 1: Placa-Mãe -->
             <div class="product-card">
                 <div class="product-image-container">
                     <div class="product-badge badge-bestseller">Mais Vendido</div>
@@ -90,6 +89,7 @@
                 </div>
             </div>
 
+            <!-- Produto 2: Processador -->
             <div class="product-card">
                 <div class="product-image-container">
                     <div class="product-badge badge-new">Novo</div>
@@ -118,6 +118,7 @@
                 </div>
             </div>
 
+            <!-- Produto 3: Placa de Vídeo -->
             <div class="product-card">
                 <div class="product-image-container">
                     <div class="product-badge badge-offer">Oferta</div>
@@ -147,6 +148,7 @@
                 </div>
             </div>
 
+            <!-- Produto 4: Memória RAM -->
             <div class="product-card">
                 <div class="product-image-container">
                     <img src="img/32gb-crucial.png" alt="DDR5 32GB Kit">
@@ -174,9 +176,10 @@
                 </div>
             </div>
 
+            <!-- Produto 5: SSD -->
             <div class="product-card">
                 <div class="product-image-container">
-                <img src="img/nvme-m2-ssd-mz-v8v1t0bw-538082263.webp" alt="nvme-m2-ssd-mz-v8v1t0bw-538082263">
+                    <img src="img/nvme-m2-ssd-mz-v8v1t0bw-538082263.webp" alt="SSD NVMe 1TB">
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -201,9 +204,10 @@
                 </div>
             </div>
 
+            <!-- Produto 6: Fonte -->
             <div class="product-card">
                 <div class="product-image-container">
-                    <img src="img/fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_1540838589_g.webp" alt="">
+                    <img src="img/fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_fonte-corsair-750w-80-plus-bronze-semi-modular-cx750m-cp-9020061_1540838589_g.webp" alt="Fonte 750W Modular">
                 </div>
                 <div class="product-info">
                     <div class="product-rating">
@@ -227,23 +231,98 @@
                     </button>
                 </div>
             </div>
-        </div> 
-        
-        <!-- Botão de voltar ao topo -->
-    <button class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">
-        ↑
-    </button>
-    
+        </div>
+
+        <!-- Botão voltar ao topo -->
+        <button class="back-to-top" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
+    </section>
+
+    <!-- =================================== -->
+    <!-- FOOTER -->
+    <!-- =================================== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tech<span>Store</span></h3>
+                <p>Sua loja especializada em hardware de alta performance. Qualidade e confiança há mais de 10 anos.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Atendimento</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Suporte Técnico</a></li>
+                    <li><a href="#">Garantia</a></li>
+                    <li><a href="#">Trocas e Devoluções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Categorias</h3>
+                <ul class="footer-links">
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#">Placas de Vídeo</a></li>
+                    <li><a href="#">Memórias</a></li>
+                    <li><a href="#">Armazenamento</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- =================================== -->
+    <!-- JAVASCRIPT -->
+    <!-- =================================== -->
     <script>
-        // Função para rolar até o final da página
-        function scrollToBottom() {
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: 'smooth'
-            });
+        // ===============================
+        // THEME TOGGLE FUNCTIONS
+        // ===============================
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         }
 
-        // Função para voltar ao topo
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            document.documentElement.setAttribute('data-theme', theme);
+        }
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // ===============================
+        // SCROLL FUNCTIONS
+        // ===============================
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -251,11 +330,11 @@
             });
         }
 
-        // Mostrar/esconder botão de voltar ao topo baseado no scroll
+        // Show/hide back to top button based on scroll
         window.addEventListener('scroll', function() {
             const backToTopBtn = document.querySelector('.back-to-top');
             const scrollIndicator = document.querySelector('.scroll-indicator');
-            
+
             if (window.pageYOffset > 300) {
                 backToTopBtn.classList.add('show');
                 scrollIndicator.style.opacity = '0';
@@ -265,18 +344,22 @@
             }
         });
 
-        // Adicionar efeito de parallax suave ao home
+        // ===============================
+        // PARALLAX EFFECT
+        // ===============================
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             const home = document.querySelector('.home');
             const rate = scrolled * -0.5;
-            
+
             if (scrolled < window.innerHeight) {
                 home.style.transform = `translateY(${rate}px)`;
             }
         });
 
-        // Animação de entrada das seções
+        // ===============================
+        // INTERSECTION OBSERVER ANIMATIONS
+        // ===============================
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -291,7 +374,7 @@
             });
         }, observerOptions);
 
-        // Observar todas as seções
+        // Observe all sections
         document.querySelectorAll('.section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(30px)';
@@ -299,9 +382,11 @@
             observer.observe(section);
         });
 
-        // Smooth scroll para links internos (se houver)
+        // ===============================
+        // SMOOTH SCROLL FOR INTERNAL LINKS
+        // ===============================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -312,64 +397,14 @@
                 }
             });
         });
+
+        // ===============================
+        // INITIALIZE ON PAGE LOAD
+        // ===============================
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTheme();
+        });
     </script>
-
-
-    </section>
-
-    <!-- =================================== -->
-    <!-- footer -->
-    <!-- =================================== -->
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Tech<span>Store</span></h3>
-                <p>Sua loja especializada em hardware de alta performance. Qualidade e confiança há mais de 10 anos.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Links Úteis</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Sobre Nós</a></li>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Atendimento</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Contato</a></li>
-                    <li><a href="#">Suporte Técnico</a></li>
-                    <li><a href="#">Garantia</a></li>
-                    <li><a href="#">Trocas e Devoluções</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Categorias</h3>
-                <ul class="footer-links">
-                    <li><a href="#">Processadores</a></li>
-                    <li><a href="#">Placas de Vídeo</a></li>
-                    <li><a href="#">Memórias</a></li>
-                    <li><a href="#">Armazenamento</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 TechStore. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-
 </body>
+
 </html>
